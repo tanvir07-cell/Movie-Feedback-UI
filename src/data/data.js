@@ -7,7 +7,7 @@ const data = [
     },
     {
         id: 2,
-        ratings: 8,
+        ratings: 3,
         title: "The Godfather",
 
     },

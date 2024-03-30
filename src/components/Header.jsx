@@ -13,7 +13,7 @@ export default Header
 
 
 Header.defaultProps = {
-    text : "Feedback UI"
+    text : "Movie Feedback"
 }
 
 Header.propTypes = {

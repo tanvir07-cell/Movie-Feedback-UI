@@ -4,7 +4,8 @@ import data from '../data/data'
 const FeedbackContext = createContext(
     {
         feedbacks:[],
-        deleteFeedback:()=>{}
+        deleteFeedback:()=>{},
+        addFeedback:()=>{}
     }
 )
 
@@ -12,14 +13,21 @@ const FeedbackContext = createContext(
 
 const FeedbackProvider = ({children}) => {
       const [feedbacks, setFeedbacks] = useState(data)
+      console.log(feedbacks)
       const deleteFeedback = (id)=>{
         const newFeedbacks = feedbacks.filter((feedback)=>feedback.id !== id)
         setFeedbacks(newFeedbacks)
       }
 
+      const addFeedback = (feedback)=>{
+        setFeedbacks([feedback,...feedbacks])
+      }
+
+     
+
 
   return (
-    <FeedbackContext.Provider value = {{feedbacks,deleteFeedback}}>
+    <FeedbackContext.Provider value = {{feedbacks,deleteFeedback,addFeedback}}>
       {children}
     </FeedbackContext.Provider>
   )

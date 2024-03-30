@@ -4,15 +4,19 @@ import FeedbackListItem from "./components/FeedbackListItem";
 import FeedbackList from "./components/FeedbackList";
 import Feedbackstats from "./components/Feedbackstats";
 import FeedbackProvider from "./context/FeedbackProvider";
+import FeedbackForm from "./components/FeedbackForm";
+import Block from "./components/Block.js";
 
 const App = () => {
   return (
 
-    <div className="bg-jacaranda-700 h-[100vh]">
+    <div className="bg-jacaranda-700">
               <Header/>
 
 
       <FeedbackProvider>
+        <FeedbackForm/>
+
         <Feedbackstats/>
 
         <FeedbackList/>
