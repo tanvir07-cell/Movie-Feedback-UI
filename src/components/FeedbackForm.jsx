@@ -1,5 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import { useFeedback } from '../context/FeedbackProvider';
+import { motion } from 'framer-motion';
 
 
 const FeedbackForm = () => {
@@ -31,7 +32,13 @@ const FeedbackForm = () => {
     }
 
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+        
+        >
 
             <form className="bg-jacaranda-400 mx-auto w-[50%] mt-10 mb-10 rounded-md p-5" onSubmit={handleSubmit}>
                 <div className='flex flex-col items-center justify-center'>
@@ -59,7 +66,7 @@ const FeedbackForm = () => {
 
                 </div>
             </form>
-        </div>
+        </motion.div>
     )
 }
 

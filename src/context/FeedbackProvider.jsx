@@ -5,7 +5,8 @@ const FeedbackContext = createContext(
     {
         feedbacks:[],
         deleteFeedback:()=>{},
-        addFeedback:()=>{}
+        addFeedback:()=>{},
+        editFeedback:()=>{}
     }
 )
 
@@ -23,11 +24,17 @@ const FeedbackProvider = ({children}) => {
         setFeedbacks([feedback,...feedbacks])
       }
 
+      const editFeedback = (editedFeedback)=>{
+        const newFeedbacks = feedbacks.map((feedback)=>feedback.id=== editedFeedback.id ? editedFeedback : feedback)
+        setFeedbacks(newFeedbacks)
+
+      }
+
      
 
 
   return (
-    <FeedbackContext.Provider value = {{feedbacks,deleteFeedback,addFeedback}}>
+    <FeedbackContext.Provider value = {{feedbacks,deleteFeedback,addFeedback,editFeedback}}>
       {children}
     </FeedbackContext.Provider>
   )
