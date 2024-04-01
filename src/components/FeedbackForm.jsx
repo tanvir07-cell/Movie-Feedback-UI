@@ -18,10 +18,10 @@ const FeedbackForm = () => {
         const feedback = formdata.get('feedback');
         const ratings = formdata.get('rating');
 
-        const newFeedback = { id: feedbacks.length + 1, title: feedback, ratings:ratings.length }
+        const newFeedback = { title: feedback, ratings: ratings.length }
 
         console.log(newFeedback)
-        
+
 
         addFeedback(newFeedback);
 
@@ -37,7 +37,7 @@ const FeedbackForm = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-        
+
         >
 
             <form className="bg-jacaranda-400 mx-auto w-[50%] mt-10 mb-10 rounded-md p-5" onSubmit={handleSubmit}>

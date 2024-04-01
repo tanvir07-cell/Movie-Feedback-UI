@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server --watch db.json --port 8000"
   },
   "keywords": [],
   "author": "Tanvir Rifat <tr9836859@gmail.com>",
@@ -33,6 +34,8 @@
     "vite": "^3.1.4"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.28.9",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

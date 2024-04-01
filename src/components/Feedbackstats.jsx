@@ -3,29 +3,36 @@ import { useFeedback } from '../context/FeedbackProvider';
 
 
 const Feedbackstats = () => {
-    const {feedbacks} = useFeedback();
+  const { data: feedbacks, isPending } = useFeedback();
 
-    let average = feedbacks.reduce((acc,cur)=>{
-           return acc + cur.ratings
-    },0)/feedbacks.length;
+  if (isPending) {
+    return <h1
+      className="bg-jacaranda-700 text-center text-2xl text-jacaranda-500 font-bold mt-10"
 
-    console.log(average)
+    >Loading...🔃🔃</h1>
+  }
+
+  let average = feedbacks.reduce((acc, cur) => {
+    return acc + cur.ratings
+  }, 0) / feedbacks.length;
+
+  console.log(average)
 
 
 
 
 
-    
-    
 
-    
+
+
+
   return (
     <div className='w-[50%] mx-auto flex items-center justify-between'>
-        <span>{feedbacks.length} reviews</span>
-        <span>Average : {isNaN(average)?0:average.toFixed(2)}</span>
-        
-        
-      
+      <span>{feedbacks.length} reviews</span>
+      <span>Average : {isNaN(average) ? 0 : average.toFixed(2)}</span>
+
+
+
     </div>
   )
 }
