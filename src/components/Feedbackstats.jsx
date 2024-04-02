@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useFeedback } from '../context/FeedbackProvider';
+import ErrorBoundary from './ErrorBoundary';
+
 
 
 const Feedbackstats = () => {
@@ -37,4 +39,13 @@ const Feedbackstats = () => {
   )
 }
 
-export default Feedbackstats
+export default function FeedbackstatsWrapper() {
+  return (
+    <ErrorBoundary msg={
+      "There was an error while fetching feedbacks data. Please refresh the page.❌❌"
+
+    }>
+      <Feedbackstats />
+    </ErrorBoundary>
+  )
+}

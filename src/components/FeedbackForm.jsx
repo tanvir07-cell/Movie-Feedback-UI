@@ -40,14 +40,14 @@ const FeedbackForm = () => {
 
         >
 
-            <form className="bg-jacaranda-400 mx-auto w-[50%] mt-10 mb-10 rounded-md p-5" onSubmit={handleSubmit}>
+            <form className="bg-jacaranda-800 bg-opacity-30 backdrop-blur-lg shadow-lg  rounded-lg mx-auto w-[50%] mt-10 mb-10  p-5" onSubmit={handleSubmit}>
                 <div className='flex flex-col items-center justify-center'>
-                    <label className='text-gray-700' htmlFor='feedback'>Feedback</label>
+                    <label className='text-gray-900 text-xl' htmlFor='feedback'>Feedback</label>
                     <input type='text' id="feedback" name='feedback' value={input} onChange={(e) => setInput(e.target.value)}
                         placeholder='Enter your movie feedback here...'
                         className='w-[50%] bg-jacaranda-200 text-gray-700 px-4 py-2 rounded-md mt-4'
                     />
-                    <label className='text-gray-700 mt-4' htmlFor='rating'>Rate your experience</label>
+                    <label className='text-gray-900 mt-4 text-xl' htmlFor='rating'>Rate your experience</label>
                     <select
                         onChange={(e) => setRating(e.target.value)}
                         id="rating" name='rating' value={rating} className='w-[50%] bg-jacaranda-200 text-gray-700 px-4 py-2 rounded-md mt-4'>

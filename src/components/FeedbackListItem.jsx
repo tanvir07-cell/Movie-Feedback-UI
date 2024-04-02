@@ -32,7 +32,7 @@ const FeedbackListItem = ({ ratings, id, title }) => {
           transition={{ duration: 1 }}
 
 
-          className='bg-jacaranda-200 flex items-center justify-center w-[50%] mx-auto p-10 rounded mt-10 relative text-gray-800'>
+          className='bg-jacaranda-400 bg-opacity-30 backdrop-blur-lg flex items-center justify-center w-[50%] mx-auto p-10 rounded mt-10 relative text-gray-800'>
           <h1 className='text-xl'>{title}</h1>
           <span className='absolute top-[-2%] left-[-2%] bg-jacaranda-500 w-10 h-10 px-4 py-2 rounded-full'>{ratings}</span>
 

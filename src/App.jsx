@@ -23,7 +23,7 @@ const queryClient = new QueryClient({
 const App = () => {
   return (
 
-    <div className="bg-jacaranda-700 ">
+    <div className="bg-jacaranda-600 ">
       <Header />
 
       <QueryClientProvider client={queryClient}>
