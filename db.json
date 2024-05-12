@@ -14,6 +14,26 @@
       "id": "7519",
       "title": "The Shawshank Redemption",
       "ratings": 5
+    },
+    {
+      "id": "979d",
+      "title": "American psycho",
+      "ratings": 5
+    },
+    {
+      "id": "7e2d",
+      "title": "Dune",
+      "ratings": 5
+    },
+    {
+      "id": "f3ad",
+      "title": "12 Monkeys",
+      "ratings": 4
+    },
+    {
+      "id": "0560",
+      "title": "Django Unchained",
+      "ratings": 5
     }
   ]
 }
