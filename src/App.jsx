@@ -5,29 +5,24 @@ import Feedbackstats from "./components/Feedbackstats";
 import FeedbackProvider from "./context/FeedbackProvider";
 import FeedbackForm from "./components/FeedbackForm";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ML from "./utils/ML";
 
 const queryClient = new QueryClient({
-
   defaultOptions: {
     queries: {
       gcTime: "Infinity",
-      staleTime: "Infinity"
-    }
-
-
-
-  }
-
+      staleTime: "Infinity",
+    },
+  },
 });
 
 const App = () => {
   return (
-
     <div className="bg-jacaranda-600 ">
+      <ML />
       <Header />
 
       <QueryClientProvider client={queryClient}>
-
         <FeedbackProvider>
           <FeedbackForm />
 
@@ -36,9 +31,7 @@ const App = () => {
           <FeedbackList />
         </FeedbackProvider>
       </QueryClientProvider>
-
-
-    </div >
+    </div>
   );
 };
 
